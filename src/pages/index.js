@@ -5,46 +5,56 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 
 import styled from 'styled-components'
+import Logo from '../components/Logo'
+import Nav from '../components/Nav'
 
 const IndexPage = () => (
   <Container>
-    <div>logo</div>
-    <nav>
-      <Link to={'/resume'}>resume</Link>
-      <Link to={'/work'}>work</Link>
-      <Link to={'/blog'}>Blog</Link>
-      <section>
-        <main>
-          <h1>Hello! I'm Droan Malik.</h1>
-          <h3>
-            I do <strong>web stuff</strong>
-          </h3>
-        </main>
-      </section>
-      <section>
-        <a target={'_blank'} href="https://github.com/notdrone">
-          github
-        </a>
-        <a target={'_blank'} href="https://instagram.com/notdrone">
-          instagram
-        </a>
-        <a target={'_blank'} href="https://twitter.com/notdrone">
-          twitter
-        </a>
-        <a target={'_blank'} href="💩">
-          linkedin
-        </a>
-        <a target={'_blank'} href="mailto:droanmalik@gmail.com">
-          email
-        </a>
-      </section>
-    </nav>
+    <Header>
+      <Logo withTitle={true} />
+      <Nav />
+    </Header>
+    <section style={{ background: 'pink' }}>
+      <main>
+        <h1>Hello! I'm Droan Malik.</h1>
+        <h3>
+          I do <strong>web stuff</strong>
+        </h3>
+      </main>
+    </section>
+    <section>
+      <a target={'_blank'} href="https://github.com/notdrone">
+        github
+      </a>
+      <a target={'_blank'} href="https://instagram.com/notdrone">
+        instagram
+      </a>
+      <a target={'_blank'} href="https://twitter.com/notdrone">
+        twitter
+      </a>
+      <a target={'_blank'} href="💩">
+        linkedin
+      </a>
+      <a target={'_blank'} href="mailto:droanmalik@gmail.com">
+        email
+      </a>
+    </section>
   </Container>
 )
+
+const Header = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+`
 
 const Container = styled.div`
   background: rgb(230, 229, 225);
   width: 100vw;
+  display: grid;
+  padding: 2rem 3rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
   border: 1rem solid white;
 `
